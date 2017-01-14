@@ -11,7 +11,7 @@ RUN apt-get update \
     && mv bin/xmr-stak-cpu /usr/bin/ \
     && mv config.txt /etc/xmr-stak-cpu/ \
     && rm -rf ../xmr-stak-cpu \
-    && apt-get purge cmake gcc g++ git \
+    && apt-get purge -y cmake gcc g++ git \
     && apt autoremove -y
 
 CMD [ "/usr/bin/xmr-stak-cpu", "/etc/xmr-stak-cpu/config.txt" ]
