@@ -25,6 +25,6 @@ set(EXECUTABLE_OUTPUT_PATH "bin")
 file(GLOB SOURCES "crypto/*.c" "*.cpp")
 
 add_executable(xmr-stak-cpu ${SOURCES})
-target_link_libraries(xmr-stak-cpu pthread)
+target_link_libraries(xmr-stak-cpu pthread stdc++)
  
 
